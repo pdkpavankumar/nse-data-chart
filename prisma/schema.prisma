@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Calls {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  OI           String
+  CHNG_IN_OI   String
+  VOLUME       String
+  IV           String
+  LTP          String
+  CHNG         String
+  BID_QTY      String
+  BID_PRICE    String
+  ASK_PRICE    String
+  ASK_QTY      String
+  STRIKE_PRICE String
+  SYMBOL       String
+  DATE         String
+}
+
+model Puts {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  BID_QTY      String
+  BID_PRICE    String
+  ASK_PRICE    String
+  ASK_QTY      String
+  CHNG         String
+  LTP          String
+  IV           String
+  VOLUME       String
+  CHNG_IN_OI   String
+  OI           String
+  STRIKE_PRICE String
+  SYMBOL       String
+  DATE         String
+}

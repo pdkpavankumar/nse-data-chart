@@ -1,0 +1,31 @@
+{
+  "name": "nse-data-chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ui": "npx prisma studio",
+    "migrate": "npx prisma migrate dev --preview-feature",
+    "reset": "npx prisma migrate reset --preview-feature",
+    "generate": "npx prisma generate",
+    "import": "node src/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdkpavankumar/nse-data-chart.git"
+  },
+  "author": "pavan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdkpavankumar/nse-data-chart/issues"
+  },
+  "homepage": "https://github.com/pdkpavankumar/nse-data-chart#readme",
+  "devDependencies": {
+    "@prisma/cli": "^2.16.1",
+    "prisma": "^2.16.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.16.1"
+  }
+}
